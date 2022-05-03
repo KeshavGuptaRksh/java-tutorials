@@ -1,0 +1,15 @@
+What is a function?
+Function ia a peice of code defined to perform a specific task.
+It divides a program into smaller section and each section serves a specific purppose.
+It makes debuggin easier.
+
+Types of function
+1 User-defined
+2 In-built functions ex. 
+ 
+Syntax of a function
+
+<return type> <function name>(<parameter list>){
+    <statement>
+}
+
