@@ -1,0 +1,15 @@
+// Program to introduce string handling
+import java.util.Scanner;
+public class P1 {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+        {
+            // Default Initializatio
+            String str = "Hello wolrd";
+            String str2;
+            System.out.println(str);
+            //User input
+            str2=sc.nextLine();
+        }
+    }
+}
