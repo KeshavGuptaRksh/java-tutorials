@@ -1,0 +1,46 @@
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class EventHandling implements ActionListener {
+    JFrame f = new JFrame("Event Handling");
+    JButton btn_blue = new JButton("Blue");
+    JButton btn_red = new JButton("Red");
+    JButton btn_green = new JButton("Green");
+    JButton btn_yellow = new JButton("Yellow");
+
+    EventHandling() {
+
+        btn_blue.setBounds(30, 30, 100, 50);
+        btn_red.setBounds(150, 30, 100, 50);
+        btn_green.setBounds(270, 30, 100, 50);
+        btn_yellow.setBounds(390, 30, 100, 50);
+        f.add(btn_blue);
+        f.add(btn_red);
+        f.add(btn_green);
+        f.add(btn_yellow);
+        btn_blue.addActionListener(this);
+        btn_red.addActionListener(this);
+        btn_green.addActionListener(this);
+        btn_yellow.addActionListener(this);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(700, 500);
+        f.setLocation(100, 100);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == btn_blue)
+            f.getContentPane().setBackground(Color.BLUE);
+        else if (e.getSource() == btn_red)
+            f.getContentPane().setBackground(Color.RED);
+        else if (e.getSource() == btn_green)
+            f.getContentPane().setBackground(Color.GREEN);
+        else
+            f.getContentPane().setBackground(Color.YELLOW);
+    }
+}
